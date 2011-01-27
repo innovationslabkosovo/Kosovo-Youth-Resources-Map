@@ -9,8 +9,8 @@
 		'required' => 'The include feed field is required.',
 	),
 	'allow_reports' => array(
-		'between' => 'The allow reports field does not appear to contain a valid value?',
-		'required' => 'The allow reports field is required.',
+		'between' => 'The allow youth resources field does not appear to contain a valid value?',
+		'required' => 'The allow youth resources field is required.',
 	),
 	'allow_stat_sharing' => array(
 		'between' => 'The stat sharing field does not appear to contain a valid value?',
@@ -108,10 +108,10 @@
 	'select_default_location' => 'Please select a default country',
 	'set_location' => 'Click and drag the map to set your exact location',
 	'site' => array(
-		'allow_clustering' => 'Cluster Reports on Map',
-		'allow_comments' => 'Allow Users to Submit Comments to Reports',
+		'allow_clustering' => 'Cluster Youth Resources on Map',
+		'allow_comments' => 'Allow Users to Submit Comments to Youth Resources',
 		'allow_feed' => 'Include RSS News Feed on Website',
-		'allow_reports' => 'Allow Users To Submit Reports',
+		'allow_reports' => 'Allow Users To Submit Information about Youth Resources',
 		'api_akismet' => 'Akismet Key',
 		'cache_pages' => 'Cache Pages',
 		'cache_pages_lifetime' => 'Cache Pages Lifetime',
@@ -120,7 +120,7 @@
 		'display_contact_page' => 'Display Contact Page',
 		'display_howtohelp_page' => 'Display "How to Help" Page',
 		'email_alerts' => 'Alerts Email Address',
-		'email_notice' => '<span>In order to receive reports by email, please configure your email account settings.</span>',
+		'email_notice' => '<span>In order to receive youth resources by email, please configure your email account settings.</span>',
 		'email_site' => 'Site Email Address',
 		'google_analytics' => 'Google Analytics',
 		'google_analytics_example' => 'Web Property ID - Formato: UA-XXXXX-XX',

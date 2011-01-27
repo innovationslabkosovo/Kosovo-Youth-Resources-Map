@@ -9,17 +9,17 @@
 		'numeric' => 'Please select a valid item to include in the download',
 	),
 	'data_point' => array(
-		'between' => 'Please select a valid type of report to download',
-		'numeric' => 'Please select a valid type of report to download',
-		'required' => 'Please select a valid type of report to download',
+		'between' => 'Please select a valid type of youth resource to download',
+		'numeric' => 'Please select a valid type of youth resource to download',
+		'required' => 'Please select a valid type of youth resource to download',
 	),
 	'from_date' => array(
 		'date_mmddyyyy' => 'The FROM date field does not appear to contain a valid date?',
 		'range' => 'Please enter a valid FROM date. It cannot be greater than today.',
 	),
 	'incident_active' => array(
-		'between' => 'Please enter a valid value for Approve This Report',
-		'required' => 'Please enter a valid value for Approve This Report',
+		'between' => 'Please enter a valid value for Approve This Youth Resource',
+		'required' => 'Please enter a valid value for Approve This Youth Resource',
 	),
 	'incident_ampm' => array(
 		'validvalues' => 'The am/pm field does not appear to contain a valid value?',
@@ -65,8 +65,8 @@
 		'required' => 'The title field is required.',
 	),
 	'incident_verified' => array(
-		'between' => 'Please enter a valid value for Verify This Report',
-		'required' => 'Please enter a valid value for Verify This Report',
+		'between' => 'Please enter a valid value for Verify This Youth Resource',
+		'required' => 'Please enter a valid value for Verify This Youth Resource',
 	),
 	'incident_video' => array(
 		'url' => 'The video links field does not appear to contain a valid URL?',
@@ -77,9 +77,9 @@
 	),
 	'locale' => array(
 		'alpha_dash' => 'The locale field has an incorrect value. ',
-		'exists' => 'This report already has a translation for this language',
+		'exists' => 'This youth resource already has a translation for this language',
 		'length' => 'The locale field has an incorrect value. ',
-		'locale' => 'The Original Report and the Translation have the same locale (language)',
+		'locale' => 'The Original Youth Resource and the Translation have the same locale (language)',
 		'required' => 'The locale is required.',
 	),
 	'location_name' => array(

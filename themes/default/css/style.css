@@ -527,8 +527,8 @@ ul.category-filters li a{
 
 ul.category-filters li a:hover, ul.category-filters li a.active {
     color: #FFFFFF;
-    background-color: #3484AC;
-    border: #3484AC 1px solid;
+    background-color: #5077A0;
+    border: #5077A0 1px solid;
 }
 
 ul.category-filters li.child{
@@ -537,8 +537,8 @@ ul.category-filters li.child{
 
 /* additional content */
 div.additional-content{
-    padding: 15px;
-    background: #F0F0F0;
+    padding: 25px;
+    background: #E2E2E2;
 }
 
 div.additional-content ol {
@@ -547,14 +547,14 @@ div.additional-content ol {
 
 /* content blocks */
 div.content-container{
-    padding: 15px;
+    padding: 25px;
     background: #E2E2E2;
 }
 
 div.content-block-left{
     padding: 15px;
     background: #FFFFFF;
-    width: 427px;
+    width: 877px;
     float: left;
     margin-right: 15px;
 }
@@ -901,12 +901,12 @@ table.table-list thead th.date{
 table.table-list tbody tr td{
     padding: 5px;
     font-size: 11px;
-    border-bottom: #EEEEEE 1px solid;
+    border-bottom: #5077A0 1px solid;
     vertical-align: top;
 }
 
 table.table-list tbody tr td a{
-    color: #0099CC;
+    color: #5077A0;
 }
 
 
@@ -957,10 +957,10 @@ div.incident-notation ul li{
 
 .swatch {
     float:left;
-    height:16px;
+    height:33px;
     margin-right: 8px;
-    width:16px;
-    border:1px solid white;
+    width:33px;
+    border:3px solid white;
 }
 
 .category-title {

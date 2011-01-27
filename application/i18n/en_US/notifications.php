@@ -11,8 +11,8 @@
 		'subject' => 'New Email Message',
 	),
 	'admin_new_report' => array(
-		'message' => 'A new report has been submitted to your website.',
-		'subject' => 'New Report',
+		'message' => 'A new youth resource has been submitted to your website.',
+		'subject' => 'New Youth Resource',
 	),
 	'admin_new_sms' => array(
 		'message' => 'A new text message has been submitted to your website.',
