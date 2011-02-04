@@ -323,7 +323,7 @@
 	'reports_location_name' => 'Refine Location name',
 	'reports_news' => 'News source link',
 	'reports_optional' => 'Optional Information',
-	'reports_photos' => 'Upload Photos',
+	'reports_photos' => 'Upload Photo',
 	'reports_return' => 'Return to the youth resources page',
 	'reports_select_city' => 'Select a City',
 	'reports_submitted' => 'Your Report about the Youth Resource has been submitted to our staff for review. We will get back to you shortly if necessary.',

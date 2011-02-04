@@ -69,7 +69,7 @@
                 		echo "<br>";
                                 echo  "<strong>".$form_field_names[$field_id]['field_name']."</strong>";
                                 echo "<br>";                     
-                                if(( $form_field_names[$field_id]['field_name'] == "Facebook Page" ) || ( $form_field_names[$field_id]['field_name'] == "Twitter Page" )){
+                                if(( $form_field_names[$field_id]['field_name'] == "Facebook Page" ) || ( $form_field_names[$field_id]['field_name'] == "Twitter Page" ) || ( $form_field_names[$field_id]['field_name'] == "Web" )){
                                     echo '<p><a href="http://'.$field_property.'">'.$field_property.'</a></p>';
                                 }else {
                                     echo "<p>".$field_property."</p></li>";

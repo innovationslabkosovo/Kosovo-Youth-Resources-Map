@@ -199,7 +199,7 @@ class Json_Controller extends Template_Controller
             (int) $_GET['z'] : 8;
 
         //$distance = 60;
-        $distance = (10000000 >> $zoomLevel) / 100000;
+        $distance = (7700000 >> $zoomLevel) / 100000;
 
         // Category ID
         $category_id = (isset($_GET['c']) AND !empty($_GET['c']) &&
@@ -371,7 +371,7 @@ class Json_Controller extends Template_Controller
             $json_item = "{";
             $json_item .= "\"type\":\"Feature\",";
             $json_item .= "\"properties\": {";
-            $json_item .= "\"name\":\"" . str_replace(chr(10), ' ', str_replace(chr(13), ' ', "<a href=" . url::base() . "reports/index/?c=".$category_id."&sw=".$southwest."&ne=".$northeast.">" . $cluster_count . " Reports</a>")) . "\",";
+            $json_item .= "\"name\":\"" . str_replace(chr(10), ' ', str_replace(chr(13), ' ', "<a href=" . url::base() . "reports/index/?c=".$category_id."&sw=".$southwest."&ne=".$northeast.">" . $cluster_count . " Youth Resources</a>")) . "\",";
             $json_item .= "\"category\":[0], ";
             $json_item .= "\"color\": \"".$color."\", ";
             $json_item .= "\"icon\": \"".$icon."\", ";
@@ -676,7 +676,7 @@ class Json_Controller extends Template_Controller
                     (int) $_GET['z'] : 8;
 
                 //$distance = 60;
-                $distance = (10000000 >> $zoomLevel) / 100000;
+                $distance = (7700000 >> $zoomLevel) / 100000;
                 
                 $filter = "";
                 $filter .= ($start_date) ? 
@@ -754,7 +754,7 @@ class Json_Controller extends Template_Controller
                     $json_item = "{";
                     $json_item .= "\"type\":\"Feature\",";
                     $json_item .= "\"properties\": {";
-                    $json_item .= "\"name\":\"" . str_replace(chr(10), ' ', str_replace(chr(13), ' ', "<a href='http://" . $sharing_url . "/reports/index/?c=0&sw=".$southwest."&ne=".$northeast."'>" . $cluster_count . " Reports</a>")) . "\",";          
+                    $json_item .= "\"name\":\"" . str_replace(chr(10), ' ', str_replace(chr(13), ' ', "<a href='http://" . $sharing_url . "/reports/index/?c=0&sw=".$southwest."&ne=".$northeast."'>" . $cluster_count . " Youth Resources</a>")) . "\",";          
                     $json_item .= "\"category\":[0], ";
                     $json_item .= "\"icon\": \"\", ";
                     $json_item .= "\"color\": \"".$sharing_color."\", ";
