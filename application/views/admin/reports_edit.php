@@ -227,6 +227,22 @@
 								?>
 							</div>			
 						</div>
+						<!-- / map choice -->
+							<br>
+						        <h3>Change Map Provider</span></h3>
+						        
+							    <?php 
+							    $layers = map::base();
+        						    $map_array = array();
+        						    foreach ($layers as $layer)
+        							{
+            								$map_array[$layer->name] = $layer->title;
+        							}
+							    print form::dropdown('map_choice',$map_array,'map_choice');?>
+							<br>
+							<br>
+						        </span>
+						<!-- / map choice -->
 						<!-- f-col-1 -->
 						<div class="f-col-1">
 							<div class="incident-location">

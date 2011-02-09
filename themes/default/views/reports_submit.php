@@ -195,7 +195,24 @@
 						<div style="clear:both;" id="find_text"><?php echo Kohana::lang('ui_main.pinpoint_location'); ?>.</div>
 					</div>
 				</div>
-				
+				<!-- / map choice -->
+				<div class="row">
+						        <h3>Change Map Provider</span></h3>
+						        <span class="sel-holder">
+							    <?php 
+							    $layers = map::base();
+        						    $map_array = array();
+        						    foreach ($layers as $layer)
+        							{
+            								$map_array[$layer->name] = $layer->title;
+        							}
+							    print form::dropdown('map_choice',$map_array,$form['map_choice']);?>
+							<br>
+							<br>
+						        </span>
+							
+						    </div>
+				<!-- / map choice -->
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_location_name'); ?><br /><span class="example"><?php echo Kohana::lang('ui_main.detailed_location_example'); ?></span></h4>
 					<?php print form::input('location_name', $form['location_name'], ' class="text long"'); ?>

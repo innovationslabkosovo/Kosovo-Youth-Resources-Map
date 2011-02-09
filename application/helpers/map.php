@@ -165,20 +165,6 @@ class map_Core {
 
 		$layer = new stdClass();
 		$layer->active = TRUE;
-		$layer->name = 'google_satellite';
-		$layer->openlayers = "Google";
-		$layer->title = 'Google Maps Satellite';
-		$layer->description = 'Google Maps Satellite Imagery.';
-		$layer->api_url = 'http://maps.google.com/maps?file=api&amp;v=2&amp;key='.Kohana::config('settings.api_google');
-		$layer->api_signup = 'http://code.google.com/apis/maps/signup.html';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'G_SATELLITE_MAP',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = TRUE;
 		$layer->name = 'google_hybrid';
 		$layer->openlayers = "Google";
 		$layer->title = 'Google Maps Hybrid';
@@ -205,101 +191,6 @@ class map_Core {
 		);
 		$layers[$layer->name] = $layer;
 
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'google_physical';
-		$layer->openlayers = "Google";
-		$layer->title = 'Google Maps Physical';
-		$layer->description = 'Google Maps Hillshades';
-		$layer->api_url = 'http://maps.google.com/maps?file=api&amp;v=2&amp;key='.Kohana::config('settings.api_google');
-		$layer->api_signup = 'http://code.google.com/apis/maps/signup.html';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'G_PHYSICAL_MAP',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'yahoo_satellite';
-		$layer->openlayers = "Yahoo";
-		$layer->title = 'Yahoo Maps Satellite';
-		$layer->description = 'Yahoo satellite imagery tiles.';
-		$layer->api_url = 'http://api.maps.yahoo.com/ajaxymap?v=3.0&appid='.Kohana::config('settings.api_yahoo');
-		$layer->api_signup = 'http://developer.yahoo.com/maps/simple/';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'YAHOO_MAP_SAT',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'yahoo_street';
-		$layer->openlayers = "Yahoo";
-		$layer->title = 'Yahoo Maps Street';
-		$layer->description = 'Yahoo streets tiles.';
-		$layer->api_url = 'http://api.maps.yahoo.com/ajaxymap?v=3.0&appid='.Kohana::config('settings.api_yahoo');
-		$layer->api_signup = 'http://developer.yahoo.com/maps/simple/';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'YAHOO_MAP_REG',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'yahoo_hybrid';
-		$layer->openlayers = "Yahoo";
-		$layer->title = 'Yahoo Maps Hybrid';
-		$layer->description = 'Yahoo hybrid of streets and satellite tiles.';
-		$layer->api_url = 'http://api.maps.yahoo.com/ajaxymap?v=3.0&appid='.Kohana::config('settings.api_yahoo');
-		$layer->api_signup = 'http://developer.yahoo.com/maps/simple/';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'YAHOO_MAP_HYB',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = FALSE;
-		$layer->name = 'virtualearth_street';
-		$layer->openlayers = "VirtualEarth";
-		$layer->title = 'Virtual Earth Street';
-		$layer->description = 'Virtual Earth (Bing) street tiles.';
-		$layer->api_url = 'http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'VEMapStyle.Road',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'virtualearth_satellite';
-		$layer->openlayers = "VirtualEarth";
-		$layer->title = 'Virtual Earth Satellite';
-		$layer->description = 'Virtual Earth (Bing) satellite tiles.';
-		$layer->api_url = 'http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'VEMapStyle.Aerial',
-		);
-		$layers[$layer->name] = $layer;
-
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'virtualearth_hybrid';
-		$layer->openlayers = "VirtualEarth";
-		$layer->title = 'Virtual Earth Hybrid';
-		$layer->description = 'Virtual Earth (Bing) hybrid of streets and satellite tiles.';
-		$layer->api_url = 'http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'type' => 'VEMapStyle.Hybrid',
-		);
-		$layers[$layer->name] = $layer;
-
 		// OpenStreetMap Mapnik
 		$layer = new stdClass();
 		$layer->active = TRUE;
@@ -317,64 +208,7 @@ class map_Core {
 		);
 		$layers[$layer->name] = $layer;
 
-		// OpenStreetMap Tiles @ Home
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'osm_tah';
-		$layer->openlayers = "OSM.Mapnik";
-		$layer->title = 'OSM Tiles@Home';
-		$layer->description = 'Alternative, community-rendered OpenStreetMap';
-		$layer->api_url = 'http://www.openstreetmap.org/openlayers/OpenStreetMap.js';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'attribution' => '&copy;<a href="@ccbysa">CCBYSA</a> 2010
-				<a href="@openstreetmap">OpenStreetMap.org</a> contributors',
-			'url' => 'http://tah.openstreetmap.org/Tiles/tile/${z}/${x}/${y}.png',
-			'type' => ''
-		);
-		$layers[$layer->name] = $layer;
-
-		// OpenStreetMap Cycling Map
-		$layer = new stdClass();
-		$layer->active = TRUE;
-		$layer->name = 'osm_cycle';
-		$layer->openlayers = "OSM.Mapnik";
-		$layer->title = 'OSM Cycling Map';
-		$layer->description = 'OpenStreetMap with highlighted bike lanes';
-		$layer->api_url = 'http://www.openstreetmap.org/openlayers/OpenStreetMap.js';
-		$layer->data = array(
-			'baselayer' => TRUE,
-			'attribution' => '&copy;<a href="@ccbysa">CCBYSA</a> 2010
-				<a href="@openstreetmap">OpenStreetMap.org</a> contributors',
-			'url' => 'http://andy.sandbox.cloudmade.com/tiles/cycle/${z}/${x}/${y}.png',
-			'type' => ''
-		);
-		$layers[$layer->name] = $layer;
-
-		// OpenStreetMap 426 hybrid overlay
-		$layer = new stdClass();
-		$layer->active = FALSE;
-		$layer->name = 'osm_4326_hybrid';
-		$layer->openlayers = "OSM.Mapnik";
-		$layer->title = 'OSM Overlay';
-		$layer->description = 'Semi-transparent hybrid overlay. Projected into 
-			WSG84 for use on non spherical-mercator maps.';
-		$layer->api_url = 'http://www.openstreetmap.org/openlayers/OpenStreetMap.js';
-		$layer->data = array(
-			'baselayer' => FALSE,
-			'attribution' => '&copy;<a href="@ccbysa">CCBYSA</a> 2010
-				<a href="@openstreetmap">OpenStreetMap.org</a> contributors',
-			'url' => 'http://oam.hypercube.telascience.org/tiles',
-			'params' => array(
-				'layers' => 'osm-4326-hybrid',
-			),
-			'options' => array(
-				'isBaseLayer' => FALSE,
-				'buffer' => 1,
-			),
-			'type' => ''
-		);
-		$layers[$layer->name] = $layer;
+		
 		
 		// Add Custom Layers
 		// Filter::map_base_layers

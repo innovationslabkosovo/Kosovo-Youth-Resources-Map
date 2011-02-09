@@ -132,7 +132,24 @@
         </ul>
         <div style="clear:both"></div>
 			</div>
-			
+			<!-- / map choice -->
+				<br>
+						        <h3>Change Map Provider</span></h3>
+						        <span class="sel-holder">
+							    <?php 
+							    $layers = map::base();
+        						    $map_array = array();
+        						    foreach ($layers as $layer)
+        							{
+            								$map_array[$layer->name] = $layer->title;
+        							}
+							    print form::dropdown('map_choice',$map_array,'map_choice');?>
+							<br>
+							<br>
+						        </span>
+							
+						    </div>
+				<!-- / map choice -->
 			<!-- start images -->
 			<?php if( count($incident_photos) > 0 ) { ?>
 				<div id="report-images" style="display:none;">

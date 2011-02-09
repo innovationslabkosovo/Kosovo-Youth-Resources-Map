@@ -236,8 +236,8 @@
 			};
 			map = new OpenLayers.Map('divMap', options);
 
-			<?php echo map::layers_js(FALSE); ?>
-			map.addLayers(<?php echo map::layers_array(FALSE); ?>);
+			<?php echo map::layers_js(TRUE); ?>
+			map.addLayers(<?php echo map::layers_array(TRUE); ?>);
 			
 			map.addControl(new OpenLayers.Control.Navigation());
 			map.addControl(new OpenLayers.Control.PanZoom());
@@ -325,6 +325,57 @@
 	        collapsed: true,
 	        unique: false
 	      });
+	
+	      all_maps = {"google_satellite":{"title":"Google Maps Satellite","openlayers":"Google","api_signup":"http:\/\/code.google.com\/apis\/maps\/signup.html"},"google_hybrid":{"title":"Google Maps Hybrid","openlayers":"Google","api_signup":"http:\/\/code.google.com\/apis\/maps\/signup.html"},"google_normal":{"title":"Google Maps Normal","openlayers":"Google","api_signup":"http:\/\/code.google.com\/apis\/maps\/signup.html"},"google_physical":{"title":"Google Maps Physical","openlayers":"Google","api_signup":"http:\/\/code.google.com\/apis\/maps\/signup.html"},"yahoo_satellite":{"title":"Yahoo Maps Satellite","openlayers":"Yahoo","api_signup":"http:\/\/developer.yahoo.com\/maps\/simple\/"},"yahoo_street":{"title":"Yahoo Maps Street","openlayers":"Yahoo","api_signup":"http:\/\/developer.yahoo.com\/maps\/simple\/"},"yahoo_hybrid":{"title":"Yahoo Maps Hybrid","openlayers":"Yahoo","api_signup":"http:\/\/developer.yahoo.com\/maps\/simple\/"},"virtualearth_street":{"title":"Virtual Earth Street","openlayers":"VirtualEarth","api_signup":""},"virtualearth_satellite":{"title":"Virtual Earth Satellite","openlayers":"VirtualEarth","api_signup":""},"virtualearth_hybrid":{"title":"Virtual Earth Hybrid","openlayers":"VirtualEarth","api_signup":""},"osm_mapnik":{"title":"OSM Mapnik","openlayers":"OSM.Mapnik","api_signup":""},"osm_tah":{"title":"OSM Tiles@Home","openlayers":"OSM.Mapnik","api_signup":""},"osm_cycle":{"title":"OSM Cycling Map","openlayers":"OSM.Mapnik","api_signup":""},"osm_4326_hybrid":{"title":"OSM Overlay","openlayers":"OSM.Mapnik","api_signup":""}};
+				
+
+
+			$('#map_choice').change(function(){					
+					selected_map = $('#map_choice option:selected').val();
+					for (var i in all_maps)
+					{
+						target = map.getLayersByName(all_maps[i].title);
+						if (i == selected_map)
+						{
+							if (target[0]) {
+								target[0].setVisibility(true);
+								map.setBaseLayer(target[0]);
+
+								if (all_maps[i].api_signup) {
+									$('#api_link').attr('href', all_maps[i].api_signup);
+									$('#api_link').attr('target', '_blank');
+								} else {
+									$('#api_link').attr('href', 'javascript:alert(\'Your current selection does not require an API key!\')');
+									$('#api_link').attr('target', '_top');
+								}
+								
+								if (all_maps[i].openlayers == 'Google') {
+									$("#api_div_google").show();
+								}
+								else
+								{
+									$("#api_div_google").hide();
+								}
+								
+								if (all_maps[i].openlayers == 'Yahoo') {
+									$("#api_div_yahoo").show();
+								}
+								else
+								{
+									$("#api_div_yahoo").hide();
+								}
+							}
+						}
+						else
+						{
+							if (target[0]) {
+								target[0].setVisibility(false);
+							};
+						}
+					};
+				});
+				
+		
 	
 		});
 

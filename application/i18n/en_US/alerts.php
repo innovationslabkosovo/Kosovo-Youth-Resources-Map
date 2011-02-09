@@ -27,7 +27,7 @@
 	),
 	'code_already_verified' => 'This code has been verified before!',
 	'code_not_found' => 'This verification code was not found! Please confirm that you have the correct URL.',
-	'code_verified' => ' Your code was verified correctly. You will now receive alerts about incidents as they happen.',
+	'code_verified' => ' Your code was verified correctly. You will now receive alerts about youth resources as new ones get registered.',
 	'confirm_request' => 'To confirm your alert request, please go to ',
 	'create_more_alerts' => 'Return to the Alerts page to create more alerts',
 	'email_alert_request_created' => 'Your Email Alert request has been created and verification message has been sent to ',

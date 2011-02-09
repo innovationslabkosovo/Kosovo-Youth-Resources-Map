@@ -273,7 +273,8 @@ class Reports_Controller extends Main_Controller {
 			'person_last' => '',
 			'person_email' => '',
 			'form_id'	  => '',
-			'custom_field' => array()
+			'custom_field' => array(),
+			'map_choice' => '',
 		);
 		//	copy the form as errors, so the errors will be stored with keys corresponding to the form field names
 		$errors = $form;
@@ -294,6 +295,7 @@ class Reports_Controller extends Main_Controller {
 		$form['incident_hour'] = "12";
 		$form['incident_minute'] = "00";
 		$form['incident_ampm'] = "pm";
+                $form['map_choice'] = "google_normal";
 		// initialize custom field array
 		$form['custom_field'] = $this->_get_custom_form_fields($id,'',true);
 		//GET custom forms

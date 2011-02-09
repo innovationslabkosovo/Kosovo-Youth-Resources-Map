@@ -422,8 +422,8 @@ a.share{
 /* map */
 div.map {
     border: #999 1px solid;
-    width: 573px;
-    height: 366px;
+    width: 900px;
+    height: 600px;
 	position:relative;
 }
 #mapStatus

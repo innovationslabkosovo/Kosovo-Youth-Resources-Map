@@ -35,6 +35,7 @@
 			OpenLayers.ImgPath = '".url::base().'media/img/openlayers/'."';
 			</script>";
 		echo html::stylesheet('media/css/openlayers','',true);
+		echo html::script('http://www.openstreetmap.org/openlayers/OpenStreetMap.js');
 	}
 	
 	// Load jQuery

@@ -7,6 +7,19 @@
 	<?php
 	// Action::header_scripts - Additional Inline Scripts from Plugins
 	Event::run('ushahidi_action.header_scripts');
+	
+	//This is the code (that did not work properly for now) if we were not to hard code the google map API
+	//$settings = ORM::factory('settings', 1);
+	//$api_google = $settings->api_google;
+	//echo "<script src=\"http://maps.google.com/maps?file=api&amp;v=2&amp;key=' . $api_google . ' type=\"text/javascript\"></script>";
+
+	echo html::script('media/js/OpenLayers', true);
+	echo "<script src=\"http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPicCDTar3zB4WqTFApVNRxQmqIEdhUP7ag1jqwW0EaRJTuQ0PhSigW9nyNfxIRtCO6_wPAu20m_ZrQ\" type=\"text/javascript\"></script>";
+		
+	echo "<script type=\"text/javascript\" src=\"http://www.openstreetmap.org/openlayers/OpenStreetMap.js\"></script>";
+	echo"<script type=\"text/javascript\">
+			OpenLayers.ImgPath = '".url::base().'media/img/openlayers/'."';
+			</script>";
 	?>
 </head>
 
