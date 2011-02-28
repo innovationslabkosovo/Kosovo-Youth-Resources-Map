@@ -364,7 +364,8 @@ class Reports_Controller extends Admin_Controller
             'incident_active' => '',
             'incident_verified' => '',
             'incident_source' => '',
-            'incident_information' => ''
+            'incident_information' => '',
+	    'precise' => ''
         );
 
         //  copy the form as errors, so the errors will be stored with keys corresponding to the form field names
@@ -544,7 +545,7 @@ class Reports_Controller extends Admin_Controller
             $post->add_rules('location_id','numeric');
             $post->add_rules('message_id','numeric');
             $post->add_rules('incident_title','required', 'length[3,200]');
-            $post->add_rules('incident_description','required');
+            //$post->add_rules('incident_description','required');
             $post->add_rules('incident_date','required','date_mmddyyyy');
             $post->add_rules('incident_hour','required','between[1,12]');
             $post->add_rules('incident_minute','required','between[0,59]');
@@ -618,6 +619,7 @@ class Reports_Controller extends Admin_Controller
 
             $post->add_rules('incident_active','required', 'between[0,1]');
             $post->add_rules('incident_verified','required', 'length[0,1]');
+	    $post->add_rules('precise','required', 'length[0,1]');
             $post->add_rules('incident_source','numeric', 'length[1,1]');
             $post->add_rules('incident_information','numeric', 'length[1,1]');
 
@@ -690,6 +692,7 @@ class Reports_Controller extends Admin_Controller
                 // Incident Evaluation Info
                 $incident->incident_active = $post->incident_active;
                 $incident->incident_verified = $post->incident_verified;
+		$incident->precise = $post->precise;
                 $incident->incident_source = $post->incident_source;
                 $incident->incident_information = $post->incident_information;
                 //Save
@@ -978,7 +981,8 @@ class Reports_Controller extends Admin_Controller
                         'incident_active' => $incident->incident_active,
                         'incident_verified' => $incident->incident_verified,
                         'incident_source' => $incident->incident_source,
-                        'incident_information' => $incident->incident_information
+                        'incident_information' => $incident->incident_information,
+			'precise' => $incident->precise
                     );
 
                     // Merge To Form Array For Display
@@ -1793,14 +1797,14 @@ class Reports_Controller extends Admin_Controller
                 'field_response' => ''
                 );
 
-            // Load Data, if Any
+            /* Load Data, if Any
             foreach ($custom_formfield->form_response as $form_response)
             {
                 if ($form_response->incident_id = $incident_id)
                 {
                     $fields_array[$custom_formfield->id]['field_response'] = $form_response->form_response;
                 }
-            }
+            }*/
         }
 
         foreach ($fields_array as $field_property)

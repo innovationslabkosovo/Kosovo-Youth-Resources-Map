@@ -275,6 +275,7 @@ class Reports_Controller extends Main_Controller {
 			'form_id'	  => '',
 			'custom_field' => array(),
 			'map_choice' => '',
+    		        'precise' => ''
 		);
 		//	copy the form as errors, so the errors will be stored with keys corresponding to the form field names
 		$errors = $form;
@@ -318,7 +319,8 @@ class Reports_Controller extends Main_Controller {
 
 			// Add some rules, the input field, followed by a list of checks, carried out in order
 			$post->add_rules('incident_title', 'required', 'length[3,200]');
-			$post->add_rules('incident_description', 'required');
+			$post->add_rules('precise','required', 'length[0,1]');
+			//$post->add_rules('incident_description', 'required');
 			$post->add_rules('incident_date', 'required', 'date_mmddyyyy');
 			$post->add_rules('incident_hour', 'required', 'between[1,12]');
 			$post->add_rules('incident_minute', 'required', 'between[0,59]');
@@ -409,7 +411,7 @@ class Reports_Controller extends Main_Controller {
 				$incident->user_id = 0;
 				$incident->incident_title = $post->incident_title;
 				$incident->incident_description = $post->incident_description;
-
+				$incident->precise = $post->precise;
 				$incident_date=explode("/",$post->incident_date);
 
 				// The $_POST['date'] is a value posted by form in mm/dd/yyyy format
@@ -831,7 +833,7 @@ class Reports_Controller extends Main_Controller {
 			}
 
 			$this->template->content->incident_verified = $incident->incident_verified;
-
+			$this->template->content->precise = $incident->precise;
 			// Retrieve Comments (Additional Information)
 			$this->template->content->comments = "";
 			if (Kohana::config('settings.allow_comments'))
@@ -1277,14 +1279,14 @@ class Reports_Controller extends Main_Controller {
 				'field_response' => ''
 				);
 
-			// Load Data, if Any
+			/* Load Data, if Any
 			foreach ($custom_formfield->form_response as $form_response)
 			{
 				if ($form_response->incident_id = $incident_id)
 				{
 					$fields_array[$custom_formfield->id]['field_response'] = $form_response->form_response;
 				}
-			}
+			}*/
 		}
 
 		foreach ($fields_array as $field_property)

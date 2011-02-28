@@ -215,7 +215,8 @@ class Settings_Controller extends Admin_Controller
 
         // Generate Available Locales
         //$locales = locale::get_i18n();
-	$locales[0] = 'en_US';
+	$locales['en_US'] = "English (US)";
+        $locales['sq_SQ'] = "Shqip (SQ)";
         $this->template->content->locales_array = $locales;
         $this->cache->set('locales', $locales, array('locales'), 604800);
     }
@@ -923,3 +924,4 @@ class Settings_Controller extends Admin_Controller
         return json_encode($map_layers);
     }
 }
+

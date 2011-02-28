@@ -63,7 +63,7 @@
 						minlength: 3
 					},
 					incident_description: {
-						required: true,
+						required: false,
 						minlength: 3
 					},
 					incident_date: {

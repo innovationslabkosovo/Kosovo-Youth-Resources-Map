@@ -484,5 +484,7 @@
 	'weight' => 'Weight',
 	'yes' => 'Yes',
 	'yesterday' => 'Yesterday',
+	'precise' => 'Location is Precise',
+	'notprecise' => 'Location not Precise',
 	);
 ?>

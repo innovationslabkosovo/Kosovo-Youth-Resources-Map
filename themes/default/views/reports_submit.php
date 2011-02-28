@@ -206,7 +206,7 @@
         							{
             								$map_array[$layer->name] = $layer->title;
         							}
-							    print form::dropdown('map_choice',$map_array,$form['map_choice']);?>
+							    print form::dropdown('map_choice',$map_array,'google_normal');?>
 							<br>
 							<br>
 						        </span>
@@ -218,6 +218,20 @@
 					<?php print form::input('location_name', $form['location_name'], ' class="text long"'); ?>
 				</div>
 
+				<div class="row">
+									<div><h5><?php echo "Is this the precise location"; ?>?</h5></div>
+									<input type="radio" name="precise" value="1"
+									<?php if ($form['precise'] == 1)
+									{
+										echo " checked=\"checked\" ";
+									}?>> <?php echo Kohana::lang('ui_main.yes');?>
+									<input type="radio" name="precise" value="0"
+									<?php if ($form['precise'] == 0)
+									{
+										echo " checked=\"checked\" ";
+									}?>> <?php echo Kohana::lang('ui_main.no');?>									
+								</div>
+				<br>
 				<!-- News Fields -->
 				<div id="divNews" class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_news'); ?></h4>

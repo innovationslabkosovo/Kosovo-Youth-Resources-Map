@@ -1213,3 +1213,4 @@ class Manage_Controller extends Admin_Controller
 		}
 	}
 }
+

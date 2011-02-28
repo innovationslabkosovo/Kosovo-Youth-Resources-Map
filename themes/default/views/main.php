@@ -177,7 +177,7 @@
         							{
             								$map_array[$layer->name] = $layer->title;
         							}
-							    print form::dropdown('map_choice',$map_array,'map_choice');?>
+							    print form::dropdown('map_choice',$map_array,'google_normal');?>
 							<br>
 							<br>
 						        </span>

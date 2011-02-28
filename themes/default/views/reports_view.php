@@ -26,8 +26,20 @@
 		<p class="report-when-where">
 			<span class="r_date"><?php echo $incident_time.' '.$incident_date; ?> </span>
 			<span class="r_location"><?php echo $incident_location; ?></span>
+			<span>
+		<?php
+    	  	if ($precise)
+    		{
+    			echo '<p class="r_verified">'.Kohana::lang('ui_main.precise').'</p>';
+    		}
+    		else
+    		{
+    			echo '<p class="r_unverified">'.Kohana::lang('ui_main.notprecise').'</p>';
+    		}
+  	  	?>	
+		</span>
 		</p>
-	
+		
 		<div class="report-category-list">
 		<p>
 			<?php
@@ -65,6 +77,7 @@
                         if( is_array($disp_custom_fields) ) {
                             foreach ($disp_custom_fields as $field_id => $field_property)
                 		{
+				if (strlen($field_property)>0){
                			echo "<hr>";                
                 		echo "<br>";
                                 echo  "<strong>".$form_field_names[$field_id]['field_name']."</strong>";
@@ -73,12 +86,12 @@
                                     echo '<p><a href="http://'.$field_property.'">'.$field_property.'</a></p>';
                                 }else {
                                     echo "<p>".$field_property."</p></li>";
-                                }
+                                }}
                             }
                         }
                         ?>
            		<!-- until here -->
-
+			<br>
 			<div class="credibility">
 				<table class="rating-table" cellspacing="0" cellpadding="0" border="0">
           <tr>
@@ -143,7 +156,7 @@
         							{
             								$map_array[$layer->name] = $layer->title;
         							}
-							    print form::dropdown('map_choice',$map_array,'map_choice');?>
+							    print form::dropdown('map_choice',$map_array,'google_normal');?>
 							<br>
 							<br>
 						        </span>
