@@ -562,8 +562,8 @@
 			//$("#endDate").val(endTime);
 			
 			// Initialize Map
-			addMarkers(gCategoryId, startTime, endTime, '', '', gMediaType);
-			refreshGraph(startTime, endTime);
+			addMarkers(gCategoryId, $('#startDate').val(), $('#endDate').val(), '', '', gMediaType);
+			refreshGraph($('#startDate').val(), $('#endDate').val());
 			
 			// Media Filter Action
 			$('.filters li a').click(function()
