@@ -97,7 +97,7 @@ class Search_Controller extends Main_Controller {
                     // Title weight = 2
                     // Description weight = 1
                     $keyword_string = $keyword_string.$plus."(CASE WHEN incident_title LIKE '%$chunk%' THEN 2 ELSE 0 END) + (CASE WHEN incident_description LIKE '%$chunk%' THEN 1 ELSE 0 END)";
-                    $where_string = $where_string.$or."incident_title LIKE '%$chunk%' OR incident_description LIKE '%$chunk%'";
+                    $where_string = $where_string." incident_active = 1 AND ".$or."incident_title LIKE '%$chunk%' OR incident_description LIKE '%$chunk%'";
                     $i++;
                 }
             }

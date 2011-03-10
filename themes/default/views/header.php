@@ -14,7 +14,7 @@
 	//echo "<script src=\"http://maps.google.com/maps?file=api&amp;v=2&amp;key=' . $api_google . ' type=\"text/javascript\"></script>";
 
 	echo html::script('media/js/OpenLayers', true);
-	echo "<script src=\"http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPicCDTar3zB4WqTFApVNRxQmqIEdhUP7ag1jqwW0EaRJTuQ0PhSigW9nyNfxIRtCO6_wPAu20m_ZrQ\" type=\"text/javascript\"></script>";
+	echo "<script src=\"http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAPicCDTar3zB4WqTFApVNRxRfQNFj4LU-XP-_Hi02SC6hTYSxnBTW58nCNOqMK8yb4Ee2K-1uCpJI7Q\" type=\"text/javascript\"></script>";
 		
 	echo "<script type=\"text/javascript\" src=\"http://www.openstreetmap.org/openlayers/OpenStreetMap.js\"></script>";
 	echo"<script type=\"text/javascript\">
