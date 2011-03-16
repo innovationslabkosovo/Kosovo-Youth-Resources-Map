@@ -265,7 +265,7 @@ class Reports_Controller extends Main_Controller {
 			'longitude' => '',
 			'location_name' => '',
 			'country_id' => '',
-			'incident_category' => array(),
+			'incident_category' => array("1"),
 			'incident_news' => array(),
 			'incident_video' => array(),
 			'incident_photo' => array(),
@@ -1260,7 +1260,7 @@ class Reports_Controller extends Main_Controller {
 
 		isset($_POST['form_id']) ? $form_id = $_POST['form_id'] : $form_id = "1";
 		isset($_POST['incident_id']) ? $incident_id = $_POST['incident_id'] : $incident_id = "";
-
+		$incident_category = $_POST['form_id'];
 		$html = "";
 		$fields_array = array();
 		$custom_form = ORM::factory('form', $form_id)->orderby('field_position','asc');

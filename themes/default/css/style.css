@@ -93,25 +93,34 @@ div.rapidxwpr{
 /* header */
 div#header{
     position: relative;
-    height: 144px;
+    height: 100px;
     margin: 0px 0px 0px 0px;
 }
 
 /* logo */
 div#logo{
-    border: 0;
-    background: #FFFFFF;
-    padding: 35px 24px;
+    padding: 35px 24px 8px 24px;
     float: left;
     margin: 14px 0 0 0;
 }
 div#logo h1{
 	margin:0;
 	padding:0;
-	font-size: 20px;
+	font-size: 30px;
 }
 div#logo span{
+	clear: left;
+	display: block;
 	font-size:14px;
+}
+
+div#logo a img {
+    background: url("http://kosovoinnovations.files.wordpress.com/2010/12/logofull_wp.png") no-repeat scroll 0 0 transparent;
+    clear: both;
+    float: right;
+    height: 40px;
+    margin: -35px 0px 0px 740px;
+    width: 193px;
 }
 
 /* main body setup */
@@ -236,7 +245,7 @@ div#searchbox{
     background: #BEBEBE;
     border: #9F9F9F 2px solid;
     border-top: 0;
-    height: 45px;
+    height: 55px;
 }
 
 /* languages */
@@ -1944,8 +1953,8 @@ ul.pager li a.active {background:#f2f7fa;}
 div.green-box {
 	margin:10px 0 25px 0;
 	padding:9px 0 8px;
-	background:#d8f1d8;
-	border:2px solid #a7d1a7;
+	background:#4CABE3;
+	font-weight: bold;
 	clear:both;
 	overflow:hidden;
 }

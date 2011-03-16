@@ -1,7 +1,9 @@
 <!-- main body -->
 <div id="main" class="clearingfix">
 	<div id="mainmiddle" class="floatbox withright">
-
+	<div class="green-box">
+DISCLAIMER: This map was developed by UNICEF Innovations Lab with the Ushahidi Platform. To the best of our knowledge and resources, the information about each youth resource is precise, but if you see incorrect information, please let us know by writing a comment or an email.
+		</div>
 	<?php if($site_message != '') { ?>
 		<div class="green-box">
 			<h3><?php echo $site_message; ?></h3>
@@ -160,10 +162,19 @@
 		<div id="content" class="clearingfix">
 			<div class="floatbox">
 			
-						
+		
 				<?php								
 				// Map and Timeline Blocks
 				echo $div_map;
+				?>
+				<!-- fullmap button -->
+				<div class="filters clearingfix">
+				<div class="fullscreenmap-btn">
+				<a href="#" class="fullscreenmap_click">Full Screen Map</a>
+				</div>
+				</div>			
+				<!-- fullmap button -->
+				<?php
 				echo $div_timeline;
 				?>
 				<!-- / map choice -->

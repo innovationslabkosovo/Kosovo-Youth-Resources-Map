@@ -1,6 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<SCRIPT language="JavaScript">
+var browserName=navigator.appName; 
+if (browserName=="Microsoft Internet Explorer")
+{
+ alert("Hi, Explorer User! To view this website as intended, please use a standards-compliant browser (e.g. Firefox, Chrome or Opera)!");
+}
+</SCRIPT>
+
 	<title><?php echo $site_name; ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<?php echo $header_block; ?>
@@ -32,6 +40,7 @@
 
 			<!-- searchbox -->
 			<div id="searchbox">
+				<pre><b>     Change Language:     Search Youth Resources:</b></pre>
 				<!-- languages -->
 				<?php echo $languages;?>
 				<!-- / languages -->
@@ -46,13 +55,13 @@
 			<!-- logo -->
 			<div id="logo">
 				<h1><?php echo "<a href='/kosovoyouthmap'> $site_name </a>"; ?></h1>
-				<span><?php echo $site_tagline; ?></span>
+				<span><?php echo $site_tagline; ?></span> 
+				<a align="right" href="http://www.kosovoinnovations.org" target="_blank"><img src="http://kosovoinnovations.files.wordpress.com/2010/12/logofull_wp.png" width="199px"></a> 
 			</div>
-			<!-- / logo -->
+			<!-- / logo -->	
 			
 			
-			
-		</div>
+		</div>         
 		<!-- / header -->
 
 		<!-- main body -->
