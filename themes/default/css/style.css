@@ -115,11 +115,10 @@ div#logo span{
 }
 
 div#logo a img {
-    background: url("http://kosovoinnovations.files.wordpress.com/2010/12/logofull_wp.png") no-repeat scroll 0 0 transparent;
+    background: transparent;
     clear: both;
-    float: right;
-    height: 40px;
-    margin: -35px 0px 0px 740px;
+    float: left;
+    height: 50px;
     width: 193px;
 }
 
@@ -433,7 +432,8 @@ div.map {
     border: #999 1px solid;
     width: 900px;
     height: 600px;
-	position:relative;
+    position:relative;
+    
 }
 #mapStatus
 {
@@ -443,7 +443,7 @@ div.map {
 	border-right: solid 1px #999;
 	border-bottom: solid 1px #999;
 	font-size: 10px;
-	width: 573px;
+	width: 576px;
 }
 #mapStatus div
 {

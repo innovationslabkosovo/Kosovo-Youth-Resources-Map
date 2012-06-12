@@ -2,7 +2,7 @@
 <div id="main" class="clearingfix">
 	<div id="mainmiddle" class="floatbox withright">
 	<div class="green-box">
-DISCLAIMER: This map was developed by UNICEF Innovations Lab with the Ushahidi Platform. To the best of our knowledge and resources, the information about each youth resource is precise, but if you see incorrect information, please let us know by writing a comment or an email.
+DISCLAIMER: This map was developed by UNICEF Innovations Lab Kosovo with the Ushahidi Platform. To the best of our knowledge and resources, the information about each youth resource is accurate! If you see incorrect or missing information, please let us know by writing a comment or filling in <a href="https://spreadsheets.google.com/viewform?hl=en&pli=1&formkey=dGJKbXVMZno1T0VYcE9lV1VGLTRRT3c6MQ#gid=0" target="_blank">this form</a>.
 		</div>
 	<?php if($site_message != '') { ?>
 		<div class="green-box">
@@ -149,7 +149,27 @@ DISCLAIMER: This map was developed by UNICEF Innovations Lab with the Ushahidi P
 				</div>
 			<?php } ?>
 			<!-- / additional content -->
-			
+<br>
+<a name="fb_share"></a> 
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+        type="text/javascript">
+</script>			
+<br>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+<div id="copymap" style="margin-top:20px">
+<table border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td>
+<p style="font-size:12px; color:#101010 ">Click the copy button to embed this map</p>
+</td>
+</tr>
+  <tr>
+    <td><input name="textfield" type="text" size="21" value=' <iframe width="100%" height="100%" frameborder="0" srcolling="no" src="http://kosovoinnovations.org/kosovoyouthmap/fancybox/"></iframe> '/></td>
+    <td><script type="text/javascript"> ShowLMCButton(' <iframe width="100%" height="100%" frameborder="0" srcolling="no" src="http://kosovoinnovations.org/kosovoyouthmap/fancybox/"></iframe> ' );  </script></td>
+  </tr>
+</table>
+</div>
 			<?php
 			// Action::main_sidebar - Add Items to the Entry Page Sidebar
 			Event::run('ushahidi_action.main_sidebar');

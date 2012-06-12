@@ -5,7 +5,7 @@
 var browserName=navigator.appName; 
 if (browserName=="Microsoft Internet Explorer")
 {
- alert("Hi, Explorer User! To view this website as intended, please use a standards-compliant browser (e.g. Firefox, Chrome or Opera)!");
+ alert("Hi, Explorer User! This website is best viewed with a standards-compliant browser (e.g. Firefox, Chrome or Opera)!");
 }
 </SCRIPT>
 
@@ -29,6 +29,20 @@ if (browserName=="Microsoft Internet Explorer")
 			OpenLayers.ImgPath = '".url::base().'media/img/openlayers/'."';
 			</script>";
 	?>
+        <script type="text/javascript" src="./lmcbutton.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22191757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 
 <body id="page">
@@ -56,7 +70,7 @@ if (browserName=="Microsoft Internet Explorer")
 			<div id="logo">
 				<h1><?php echo "<a href='/kosovoyouthmap'> $site_name </a>"; ?></h1>
 				<span><?php echo $site_tagline; ?></span> 
-				<a align="right" href="http://www.kosovoinnovations.org" target="_blank"><img src="http://kosovoinnovations.files.wordpress.com/2010/12/logofull_wp.png" width="199px"></a> 
+				<a align="right" href="http://www.kosovoinnovations.org" target="_blank"><img src="http://82.114.84.33:70/sites/default/files/logo-final.png"></a> 
 			</div>
 			<!-- / logo -->	
 			

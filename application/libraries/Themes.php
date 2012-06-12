@@ -195,7 +195,7 @@ function runScheduler(img){img.onload = null;img.src = '".url::site().'scheduler
 		{
 			//$locales = locale::get_i18n();
 			$locales['en_US'] = "English (US)";
-        		$locales['sq_SQ'] = "Shqip (SQ)";
+        		//$locales['sq_SQ'] = "Shqip (SQ)";
 			$this->cache->set('locales', $locales, array('locales'), 604800);
 		}
 		

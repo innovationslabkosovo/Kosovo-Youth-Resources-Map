@@ -200,7 +200,7 @@ class Json_Controller extends Template_Controller
 
         //$distance = 60;
         $distance = (7700000 >> $zoomLevel) / 100000;
-
+	//$distance = 0.00001;
         // Category ID
         $category_id = (isset($_GET['c']) AND !empty($_GET['c']) &&
             is_numeric($_GET['c']) AND $_GET['c'] != 0) ?
@@ -942,3 +942,4 @@ class Json_Controller extends Template_Controller
     }
 
 }
+
